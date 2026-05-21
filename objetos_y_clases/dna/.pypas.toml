@@ -1,0 +1,15 @@
+version = "0.1.7"
+slug = "dna"
+bundle = [ "/docs/README.pdf", "/tests", "/main.py", "/vendor.py",]
+backup_on_update = [ "/main.py",]
+exclude_from_zip = [ "*.pyc", ".DS_Store", "/.git", "*.bak", "*cache*", "/args.py",]
+
+[release_notes]
+"0.1.0" = "Primera versión"
+"0.1.1" = "Ignora carpetas cache al crear el zip"
+"0.1.2" = "Ignora args.py al comprimir ejercicio"
+"0.1.3" = "Añade conftest"
+"0.1.4" = "Añade fichero .dna para tests"
+"0.1.5" = "Corrige error en creación de directorio temporal para tests"
+"0.1.6" = "Corrige enunciado para método dump_to_file()"
+"0.1.7" = "Añade recordatorio en el enunciado sobre métodos auxiliares"

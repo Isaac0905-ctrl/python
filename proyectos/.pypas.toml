@@ -1,0 +1,12 @@
+version = "0.1.4"
+slug = "titsa"
+bundle = [ "/docs/README.pdf", "/tests", "/src", "/data", "/main.py"]
+backup_on_update = [ "/src", "/main.py"]
+exclude_from_zip = [ "*.pyc", ".DS_Store", "/.git", "*.bak", "*cache*", "/args.py",]
+
+[release_notes]
+"0.1.0" = "Primera versión"
+"0.1.1" = "Ajuste de enunciado"
+"0.1.2" = "Corrige import DbHandler en users.py"
+"0.1.3" = "Corrige constructores de Stop y Bus; Corrige bundle del ejercicio"
+"0.1.4" = "Explica el método user_trip()"
