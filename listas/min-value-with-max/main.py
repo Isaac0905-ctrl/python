@@ -1,8 +1,7 @@
 def run(values: list) -> int:
     values = [-value for value in values]
-    max_value = min(values)
-
-    return -max_value
+    min_value = max(values)
+    return -min_value
 
 
 # DO NOT TOUCH THE CODE BELOW
