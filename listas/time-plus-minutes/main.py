@@ -1,8 +1,11 @@
 def run(time: str, offset: int) -> str:
-    hour, minute = time.split(':')
-    offset = offset // 60
-    hour = int(hour) + offset
-    final_time = f'{hour}:{minute}'
+    hour, minutes = time.split(':')
+    total_minutes = (int(hour) * 60 + int(minutes)) + offset
+    total_hours = total_minutes // 60
+    remaining_minutes = total_minutes % 60
+    if total_hours > 23:
+        total_hours = total_hours % 24
+    final_time = f'{total_hours}:{remaining_minutes:02d}'
     return final_time
 
 
