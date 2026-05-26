@@ -7,7 +7,8 @@ def run(farm: list) -> str:
     else:
         for animal in farm:
             if animal == WOLF:
-                msg = f'Cuidado oveja {index}, el lobo te va a comer'
+                index += 1
+                msg = f'Cuidado oveja {lenght-index}, el lobo te va a comer'
             else:
                 index += 1
     return msg
