@@ -1,12 +1,16 @@
 def run(fullname: str) -> str:
-    fullname = fullname.upper().replace(',','')
-    initials = fullname[0]+'.'
-    index = 0
     SPACE = ' '
-    for letter in fullname:
+    index = 0
+    lastname, name = fullname.upper().split(',')
+    name = name.lstrip()
+    name = name[0]
+    initials = f'{name}.'
+    initials += lastname[0] + '.'
+
+    for letter in lastname:
         if letter == SPACE:
-            initials += fullname[index + 1]+'.'
-            index += 1
+            initials += lastname[index + 1] + '.'
+            break
         else:
             index += 1
     return initials
