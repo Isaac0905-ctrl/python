@@ -1,7 +1,13 @@
 def run(cinfo: str) -> dict:
+    cinfo = cinfo.replace(';', ':').split(':')
+    index = 0
     cities = {}
-    for city, population in cinfo.items():
-        cities[city] = population
+    while index < len(cinfo):
+        city = cinfo[index]
+        index += 1
+        population = cinfo[index]
+        index += 1
+        cities[city] = int(population)
     return cities
 
 
