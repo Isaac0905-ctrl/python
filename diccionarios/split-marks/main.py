@@ -1,5 +1,8 @@
 def run(marks: dict) -> tuple:
-    # TODO
+    passed = {name.upper() : note for name, note in marks.items() if note >= 5}
+    failed = {name.lower() : note for name, note in marks.items() if note < 5}
+
+
     return passed, failed
 
 
